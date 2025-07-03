@@ -40,4 +40,10 @@
   - [DAB-DETR](Weekly_upload/Week_03/DAB-DETR.pdf)
   - [DINO](Weekly_upload/Week_03/DINO.pdf)
   - [DN-DETR](Weekly_upload/Week_03/DN-DETR.pdf)
-  - [Mask DINO](Weekly_upload/Week_03/Mask DINO.pdf)
+  - [Mask DINO](Weekly_upload/Week_03/MaskDINO.pdf)
+
+### Week 04
+
+- 📄 [本周论文详情](Weekly_upload/Week_04/README.md)
+  - [g-dino](Weekly_upload/Week_04/g-dino.pdf)
+  - [g-dino1.5](Weekly_upload/Week_04/g-dino1.5.pdf)
