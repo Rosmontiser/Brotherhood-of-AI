@@ -81,6 +81,16 @@ def main():
     pdf_entries = []
 
     for pdf_file in sorted(Path(pdf_dir).glob("*.pdf")):
+        orig_name = pdf_file.name
+        # 检查文件名是否包含空格
+        if " " in orig_name:
+            new_name = orig_name.replace(" ", "_")
+            new_path = pdf_file.with_name(new_name)
+            # 重命名文件
+            pdf_file.rename(new_path)
+            print(f"⚠️ 文件名包含空格，已重命名为: {new_name}")
+            pdf_file = new_path  # 更新 pdf_file 为新路径
+
         print(f"📎 Processing {pdf_file.name}...")
         try:
             doc = fitz.open(pdf_file)
