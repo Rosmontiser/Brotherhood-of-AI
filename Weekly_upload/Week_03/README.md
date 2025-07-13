@@ -58,7 +58,9 @@ and achieves 46.0 AP and 49.5 AP trained for 12 and 50 epochs with the ResNet-50
   <td><img src="./DN-DETR_page2.png" alt="Page image" width="500"/></td>
 </tr></table>
 
+
 ## [Mask DINO](Mask_DINO.pdf)
+
 
 **📝 摘要**：
 
