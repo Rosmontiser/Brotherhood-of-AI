@@ -1,4 +1,4 @@
-# 📚 Week 03 · 论文解读（DETR 系列）
+# 📚 Week 03 · 论文简介（DETR 系列）
 
 ## 1) DAB-DETR
 

@@ -1,4 +1,4 @@
-# 📚 Week 02 · 论文解读
+# 📚 Week 02 · 论文简介
 
 ## 1) SAM (Segment Anything)
 

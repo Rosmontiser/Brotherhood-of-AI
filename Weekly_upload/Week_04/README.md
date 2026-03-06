@@ -1,4 +1,4 @@
-# 📚 Week 04 · 论文解读（Grounding DINO）
+# 📚 Week 04 · 论文简介（Grounding DINO）
 
 ## 1) Grounding DINO
 

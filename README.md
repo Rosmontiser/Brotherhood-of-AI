@@ -1,8 +1,8 @@
 # 🤖 Brotherhood of AI · 每周论文精选
 
-> 每周更新 1 组值得读的 AI 论文：
+> 每周更新 1 组值得读的论文：
 > - 首页快速浏览
-> - 点击进入周报详情（含论文解读）
+> - 点击进入周报简介
 > - 每篇都可直达 PDF
 
 ---
@@ -11,13 +11,13 @@
 
 ### Week 04
 
-- 📁 [本周论文详情（解读）](Weekly_upload/Week_04/README.md)
+- 📁 [本周论文简介](Weekly_upload/Week_04/README.md)
   - [Grounding DINO（g-dino）PDF](Weekly_upload/Week_04/g-dino.pdf)
   - [Grounding DINO 1.5（g-dino1.5）PDF](Weekly_upload/Week_04/g-dino1.5.pdf)
 
 ### Week 03
 
-- 📁 [本周论文详情（解读）](Weekly_upload/Week_03/README.md)
+- 📁 [本周论文简介](Weekly_upload/Week_03/README.md)
   - [DAB-DETR PDF](Weekly_upload/Week_03/DAB-DETR.pdf)
   - [DN-DETR PDF](Weekly_upload/Week_03/DN-DETR.pdf)
   - [DINO PDF](Weekly_upload/Week_03/DINO.pdf)
@@ -25,7 +25,7 @@
 
 ### Week 02
 
-- 📁 [本周论文详情（解读）](Weekly_upload/Week_02/README.md)
+- 📁 [本周论文简介](Weekly_upload/Week_02/README.md)
   - [SAM PDF](Weekly_upload/Week_02/SAM.pdf)
   - [SAM2 PDF](Weekly_upload/Week_02/SAM2.pdf)
   - [PAM PDF](Weekly_upload/Week_02/PAM.pdf)
@@ -33,7 +33,7 @@
 
 ### Week 01
 
-- 📁 [本周论文详情（解读）](Weekly_upload/Week_01/README.md)
+- 📁 [本周论文简介](Weekly_upload/Week_01/README.md)
   - [GLEE PDF](Weekly_upload/Week_01/GLEE.pdf)
   - [Qwen-VL PDF](Weekly_upload/Week_01/qwen-vl.pdf)
 
@@ -52,7 +52,7 @@
 每周新增内容时：
 
 1. 上传论文 PDF 到对应周目录
-2. 在该周 `README.md` 增加解读
+2. 在该周 `README.md` 增加简介
 3. 在本首页新增该周入口与 PDF 链接
 
 > 目标：把这个仓库维护成“可持续追踪 + 高质量摘要 + 方便检索”的论文知识库。
