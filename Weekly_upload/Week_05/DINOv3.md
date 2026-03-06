@@ -35,8 +35,8 @@ DINOv3 的主线是：在超大规模自监督训练下，保持全局表征继�
 - 核心做法：冻结一个“早期 teacher”作为 Gram teacher，对 student 的 patch 相似结构加约束
 - 约束对象不是 feature 向量本身，而是 Gram 矩阵（patch 两两点积）
 
-若 student patch 特征为 \(X_S\in\mathbb{R}^{P\times d}\)，Gram teacher 为 \(X_G\)，则约束目标是让
-\(X_SX_S^\top\) 逼近 \(X_GX_G^\top\)。
+若 student patch 特征记为 `X_S ∈ R^(P×d)`，Gram teacher 记为 `X_G`，
+则约束目标是让 `X_S · X_S^T` 逼近 `X_G · X_G^T`。
 
 这相当于固定局部关系结构，同时允许特征在语义空间中继续演化。
 
