@@ -4,6 +4,11 @@
 
 ## 📚 论文索引（按周）
 
+### Week 05
+
+- 📁 [本周论文简介](Weekly_upload/Week_05/README.md)
+  - [DINOv3](Weekly_upload/Week_05/DINOv3.md)
+
 ### Week 04
 
 - 📁 [本周论文简介](Weekly_upload/Week_04/README.md)
