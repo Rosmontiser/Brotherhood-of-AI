@@ -24,9 +24,9 @@ DINOv3 不是单点改进，而是一个三阶段系统：
 
 - 损失组合：
 
-$$
-L_{\mathrm{pre}}=L_{\mathrm{DINO}}+L_{\mathrm{iBOT}}+0.1\cdot L_{\mathrm{DKoleo}}
-$$
+```text
+Lpre = LDINO + LiBOT + 0.1 * LDKoleo
+```
 - 训练策略：学习率、权重衰减、EMA 动量采用常数设置，支持持续训练
 - 架构策略：扩展到 7B 规模，并引入 RoPE-box jittering 强化尺度与分辨率鲁棒性
 
@@ -50,9 +50,9 @@ Fig.5 给出关键现象：
 
 - 固定一个“早期 teacher”作为 Gram teacher
 - student 不直接对齐 teacher feature，而是对齐 patch 关系结构
-- 对齐对象是 Gram 矩阵：$G = X X^\top$
+- 对齐对象是 Gram 矩阵：G = X · X^T
 
-等价目标可写成：让 student 的 $G_s = X_s X_s^\top$ 接近 teacher 的 $G_g = X_g X_g^\top$。
+等价目标可写成：让 student 的 Gs = Xs · Xs^T 接近 teacher 的 Gg = Xg · Xg^T。
 
 这样做的意义是：保持局部几何关系稳定，同时允许特征向量本身继续学习。
 
