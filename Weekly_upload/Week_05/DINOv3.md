@@ -24,9 +24,9 @@ DINOv3 不是单点改进，而是一个三阶段系统：
 
 - 损失组合：
 
-```math
-L_{pre}=L_{DINO}+L_{iBOT}+0.1\cdot L_{DKoleo}
-```
+$$
+L_{\mathrm{pre}}=L_{\mathrm{DINO}}+L_{\mathrm{iBOT}}+0.1\cdot L_{\mathrm{DKoleo}}
+$$
 - 训练策略：学习率、权重衰减、EMA 动量采用常数设置，支持持续训练
 - 架构策略：扩展到 7B 规模，并引入 RoPE-box jittering 强化尺度与分辨率鲁棒性
 
