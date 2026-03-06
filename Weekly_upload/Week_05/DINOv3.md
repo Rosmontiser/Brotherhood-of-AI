@@ -22,7 +22,7 @@ DINOv3 不是单点改进，而是一个三阶段系统：
 
 ### 2.1 预训练主配方
 
-- 损失组合：`Lpre = LDINO + LiBOT + 0.1 * LDKoleo`
+- 损失组合：Lpre = LDINO + LiBOT + 0.1 * LDKoleo
 - 训练策略：学习率、权重衰减、EMA 动量采用常数设置，支持持续训练
 - 架构策略：扩展到 7B 规模，并引入 RoPE-box jittering 强化尺度与分辨率鲁棒性
 
@@ -46,9 +46,9 @@ Fig.5 给出关键现象：
 
 - 固定一个“早期 teacher”作为 Gram teacher
 - student 不直接对齐 teacher feature，而是对齐 patch 关系结构
-- 对齐对象是 Gram 矩阵：`G = X * X^T`
+- 对齐对象是 Gram 矩阵：G = X * X^T
 
-等价目标可写成：让 student 的 `Gs = Xs * Xs^T` 接近 teacher 的 `Gg = Xg * Xg^T`。
+等价目标可写成：让 student 的 Gs = Xs * Xs^T 接近 teacher 的 Gg = Xg * Xg^T。
 
 这样做的意义是：保持局部几何关系稳定，同时允许特征向量本身继续学习。
 
@@ -116,24 +116,7 @@ Gram Anchoring 的关键不是“加一个正则项”，而是改变约束层�
 
 ---
 
-## 5. 外部解读补充（社区共识）
-
-结合公开解读内容，外部讨论重点基本一致：
-
-- DINOv3 的主创新是 Gram Anchoring，而不是单纯“更大模型”
-- 关键价值在于修复长训练后 dense 特征退化
-- Post-training 两步（高分辨率适配 + 蒸馏）决定了实际可用性
-
-参考链接：
-
-- arXiv 摘要页：<https://arxiv.org/abs/2508.10104>
-- Meta 研究页：<https://ai.meta.com/research/publications/dinov3/>
-- 社区解读（中文）：<https://zhuanlan.zhihu.com/p/1941602621719844204>
-- 社区解读（技术向）：<https://developer.volcengine.com/articles/7542489524816117796>
-
----
-
-## 6. 结论
+## 5. 结论
 
 这篇工作最核心的增量是：
 
@@ -145,7 +128,7 @@ Gram Anchoring 的关键不是“加一个正则项”，而是改变约束层�
 
 ---
 
-## 7. 相关建议
+## 6. 相关建议
 
 1. 复现时同时跟踪 IN1k 与 VOC/ADE，避免只看分类误判训练质量
 2. 优先复现实验中的 `200k + 2×` Gram teacher 设置
