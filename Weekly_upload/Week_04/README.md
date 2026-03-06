@@ -1,40 +1,43 @@
-# 📚 Week_04 论文精选
+# 📚 Week 04 · 论文解读（Grounding DINO）
 
-## [g-dino](g-dino.pdf)
+## 1) Grounding DINO
 
-**📝 摘要**：
+- 论文 PDF：[`g-dino.pdf`](./g-dino.pdf)
+- 一句话结论：**Grounding DINO 把开放词汇检测与文本 grounding 深度融合，实现“给词就能检”。**
 
-> In this paper, we present an open-set object detector,
-called Grounding DINO, by marrying Transformer-based
-detector DINO with grounded pre-training, which can de-
-tect arbitrary objects with human inputs such as category
-* This work was done when Shilong Liu, Feng Li, Hao Zhang, and Jie
+### 核心贡献
 
-<table><tr>
-  <td><img src="./g-dino_page1.png" alt="Page image" width="500"/></td>
-  <td><img src="./g-dino_page2.png" alt="Page image" width="500"/></td>
-</tr></table>
+1. 将 DINO 检测器与 grounded pre-training 结合。  
+2. 支持开放类别检测（不局限固定类别表）。  
+3. 与文本提示对齐，提升跨类别泛化能力。
 
-## [g-dino1.5](g-dino1.5.pdf)
+### 启发与可复用点
 
-**📝 摘要**：
+- 对长尾类别、临时类目和零样本检索很友好。
+- 可作为“检测 + 文本查询”统一入口。
 
-> This paper introduces Grounding DINO 1.5, a suite of advanced open-set object
-detection models developed by IDEA Research, which aims to advance the “Edge”1
-of open-set object detection. The suite encompasses two models: Grounding DINO
-1.5 Pro, a high-performance model designed for stronger generalization capability
-across a wide range of scenarios, and Grounding DINO 1.5 Edge, an efficient model
-optimized for faster speed demanded in many applications requiring edge deploy-
-ment. The Grounding DINO 1.5 Pro model advances its predecessor by scaling up
-the model architecture, integrating an enhanced vision backbone, and expanding
-the training dataset to over 20 million images with grounding annotations, thereby
-achieving a richer semantic understanding. The Grounding DINO 1.5 Edge model,
-while designed for efficiency with reduced feature scales, maintains robust detec-
-tion capabilities by being trained on the same comprehensive dataset. Empirical
-results demonstrate the effectiveness o
+---
 
-<table><tr>
-  <td><img src="./g-dino1.5_page1.png" alt="Page image" width="500"/></td>
-  <td><img src="./g-dino1.5_page2.png" alt="Page image" width="500"/></td>
-</tr></table>
+## 2) Grounding DINO 1.5
 
+- 论文 PDF：[`g-dino1.5.pdf`](./g-dino1.5.pdf)
+- 一句话结论：**Grounding DINO 1.5 在规模、泛化与效率上继续推进，并区分 Pro / Edge 两条实用路线。**
+
+### 核心贡献
+
+1. 提供 Pro（高性能）与 Edge（高效率）双模型形态。  
+2. 扩展训练数据与骨干能力，增强场景泛化。  
+3. 在保持开放检测能力的同时，提升推理实用性。
+
+### 启发与可复用点
+
+- 需要极致精度可选 Pro；追求部署速度和成本可选 Edge。
+- 对工业落地来说，这种“双路线产品化”价值很高。
+
+---
+
+## 本周总结
+
+Week 04 聚焦“开放世界检测”的工程化升级：  
+从 Grounding DINO 到 1.5，核心是**更强泛化 + 更好部署可选项**。  
+如果你的系统要面对动态类别、不断变化的语义需求，这条路线值得持续跟进。

@@ -1,67 +1,76 @@
-# 📚 Week_02 论文精选
+# 📚 Week 02 · 论文解读
 
-## [GRIT](GRIT.pdf)
+## 1) SAM (Segment Anything)
 
-**📝 摘要**：
+- 论文 PDF：[`SAM.pdf`](./SAM.pdf)
+- 一句话结论：**SAM 用“可提示分割 + 超大规模数据（SA-1B）”定义了通用分割基础模型范式。**
 
-> Recent studies have demonstrated the efficacy of using Reinforcement Learning
-(RL) in building reasoning models that articulate chains of thoughts prior to pro-
-ducing final answers. However, despite ongoing advances that aim at enabling
-reasoning for vision-language tasks, existing open-source visual reasoning models
-typically generate reasoning content with pure natural language, lacking explicit
-integration of visual information. This limits their ability to produce clearly articu-
-lated and visually grounded reasoning chains. To this end, we propose Grounded
+### 核心贡献
 
-<table><tr>
-  <td><img src="./GRIT_page1.png" alt="Page image" width="500"/></td>
-  <td><img src="./GRIT_page2.png" alt="Page image" width="500"/></td>
-</tr></table>
+1. 提出 Segment Anything 任务（promptable segmentation）。  
+2. 发布 SA-1B（11M 图像、10 亿级 mask）。  
+3. 零样本泛化能力强，跨域迁移成本低。  
+4. 成为后续众多视觉应用的底层组件。
 
-## [PAM](PAM.pdf)
+### 启发与可复用点
 
-**📝 摘要**：
+- 在实际系统里，SAM 常作为“前景提取/候选区域生成”模块。
+- 对交互式标注、数据清洗、弱监督训练都有明显帮助。
 
-> We present Perceive Anything Model (PAM), a conceptually straightforward and
-efficient framework for comprehensive region-level visual understanding in im-
-ages and videos. Our approach extends the powerful segmentation model SAM
-2 by integrating Large Language Models (LLMs), enabling simultaneous object
-∗Core Contributor
-†Corresponding Authors
+---
 
-<table><tr>
-  <td><img src="./PAM_page1.png" alt="Page image" width="500"/></td>
-  <td><img src="./PAM_page2.png" alt="Page image" width="500"/></td>
-</tr></table>
+## 2) SAM2
 
-## [SAM](SAM.pdf)
+- 论文 PDF：[`SAM2.pdf`](./SAM2.pdf)
+- 一句话结论：**SAM2 将“Anything 分割”从静态图像推进到视频时序场景，强化记忆与持续跟踪能力。**
 
-**📝 摘要**：
+### 核心贡献
 
-> We introduce the Segment Anything (SA) project: a new
-task, model, and dataset for image segmentation. Using our
-efﬁcient model in a data collection loop, we built the largest
-segmentation dataset to date (by far), with over 1 billion
-masks on 11M licensed and privacy respecting images. The
-model is designed and trained to be promptable, so it can
-transfer zero-shot to new image distributions and tasks. We
-evaluate its capabilities on numerous tasks and ﬁnd that
-its zero-shot performance is impressive – often competitive
-with or even superior to prior fully supervised results. We
-are releasing the Segment Anything Model (SAM) and cor-
-responding dataset (SA-1B) of 1B masks and 11M images at
-https://segment-anything.com to foster research into foun-
-dation models for computer vision.
-1. Introduction
+1. 从图像扩展到视频对象分割。  
+2. 更强调时序一致性与长期跟踪。  
+3. 对动态场景和在线交互更实用。
 
-<table><tr>
-  <td><img src="./SAM_page1.png" alt="Page image" width="500"/></td>
-  <td><img src="./SAM_page2.png" alt="Page image" width="500"/></td>
-</tr></table>
+### 启发与可复用点
 
-## [SAM2](SAM2.pdf)
+- 若业务包含视频流（监控、机器人、短视频编辑），SAM2 的价值明显高于 SAM。
 
-<table><tr>
-  <td><img src="./SAM2_page1.png" alt="Page image" width="500"/></td>
-  <td><img src="./SAM2_page2.png" alt="Page image" width="500"/></td>
-</tr></table>
+---
 
+## 3) PAM (Perceive Anything Model)
+
+- 论文 PDF：[`PAM.pdf`](./PAM.pdf)
+- 一句话结论：**PAM 在 SAM2 基础上融合 LLM，尝试把“分割能力”升级为“区域级理解能力”。**
+
+### 核心贡献
+
+1. 将分割与语言理解打通。  
+2. 强化区域级对象的语义解释与问答。  
+3. 在图像/视频的统一理解上更进一步。
+
+### 启发与可复用点
+
+- 对“看图 + 解释 + 决策建议”这类产品形态很有参考价值。
+
+---
+
+## 4) GRIT
+
+- 论文 PDF：[`GRIT.pdf`](./GRIT.pdf)
+- 一句话结论：**GRIT 关注视觉推理过程中的“显式视觉依据”，提升推理链可解释性与可追溯性。**
+
+### 核心贡献
+
+1. 将视觉证据更明确地融入推理链。  
+2. 不只输出结论，更强调“为什么这样判断”。  
+3. 对复杂视觉问答和多步推理更友好。
+
+### 启发与可复用点
+
+- 适用于对可解释性要求高的任务（审核、医疗辅助、工业质检）。
+
+---
+
+## 本周总结
+
+Week 02 的关键词是：**Anything 分割能力的演进与外扩**。  
+路径是 SAM → SAM2（时序化）→ PAM（语言化）→ GRIT（可解释推理化）。
