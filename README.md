@@ -1,10 +1,5 @@
 # 🤖 Brotherhood of AI · 每周论文精选
 
-> 每周更新 1 组值得读的论文：
-> - 首页快速浏览
-> - 点击进入周报简介
-> - 每篇都可直达 PDF
-
 ---
 
 ## 📚 论文索引（按周）
@@ -36,23 +31,3 @@
 - 📁 [本周论文简介](Weekly_upload/Week_01/README.md)
   - [GLEE PDF](Weekly_upload/Week_01/GLEE.pdf)
   - [Qwen-VL PDF](Weekly_upload/Week_01/qwen-vl.pdf)
-
----
-
-## 🧭 阅读建议
-
-- 想快速跟进：先看各周 README 的「一句话结论 + 核心贡献」。
-- 想做项目落地：重点看「启发与可复用点」。
-- 想补背景：从 Week 02（SAM 系列）→ Week 03（DETR 系列）→ Week 04（Grounding）顺序读。
-
----
-
-## 🔄 更新规则
-
-每周新增内容时：
-
-1. 上传论文 PDF 到对应周目录
-2. 在该周 `README.md` 增加简介
-3. 在本首页新增该周入口与 PDF 链接
-
-> 目标：把这个仓库维护成“可持续追踪 + 高质量摘要 + 方便检索”的论文知识库。
