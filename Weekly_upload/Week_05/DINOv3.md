@@ -25,7 +25,7 @@ DINOv3 的主线是：在超大规模自监督训练下，保持全局表征继�
 ### 2.1 预训练阶段
 
 - 主损失：
-  `L_pre = L_DINO + L_iBOT + 0.1 * L_DKoleo`
+  `Lpre = LDINO + LiBOT + 0.1 × LDKoleo`
 - 训练策略：学习率、权重衰减、EMA 动量使用常数设置，支持长训练继续扩展
 - 结构更新：7B 规模模型 + RoPE-box jittering，增强分辨率和尺度鲁棒性
 
@@ -35,8 +35,8 @@ DINOv3 的主线是：在超大规模自监督训练下，保持全局表征继�
 - 核心做法：冻结一个“早期 teacher”作为 Gram teacher，对 student 的 patch 相似结构加约束
 - 约束对象不是 feature 向量本身，而是 Gram 矩阵（patch 两两点积）
 
-若 student patch 特征记为 `X_S ∈ R^(P×d)`，Gram teacher 记为 `X_G`，
-则约束目标是让 `X_S · X_S^T` 逼近 `X_G · X_G^T`。
+若 student 的 patch 特征记为 X<sub>S</sub> ∈ ℝ<sup>P×d</sup>，Gram teacher 记为 X<sub>G</sub>，
+则约束目标是让 X<sub>S</sub> · X<sub>S</sub><sup>T</sup> 逼近 X<sub>G</sub> · X<sub>G</sub><sup>T</sup>。
 
 这相当于固定局部关系结构，同时允许特征在语义空间中继续演化。
 
