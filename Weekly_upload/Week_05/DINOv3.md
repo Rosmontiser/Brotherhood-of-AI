@@ -25,7 +25,7 @@ DINOv3 的主线是：在超大规模自监督训练下，保持全局表征继�
 ### 2.1 预训练阶段
 
 - 主损失：
-  \(L_{pre}=L_{DINO}+L_{iBOT}+0.1\cdot L_{DKoleo}\)
+  `L_pre = L_DINO + L_iBOT + 0.1 * L_DKoleo`
 - 训练策略：学习率、权重衰减、EMA 动量使用常数设置，支持长训练继续扩展
 - 结构更新：7B 规模模型 + RoPE-box jittering，增强分辨率和尺度鲁棒性
 
